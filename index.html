@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU QUARTO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="tela" class="container">
+        <img class= "imgQuarto" id="img" src="img/maisContraste.jpg" alt="Ilustração do meu quarto">
+
+      
+        <audio id="somQuarto" src="som/musica.mpeg" loop></audio>
+        <audio id="somPapel" src="som/som-papel.mp3"></audio> <!--som de papel-->
+        <audio id="somBtn" src="som/lucadialessandro-tap-notification-180637.mp3"></audio> <!-- som btn-->
+        <audio id="somEscrita" src="som/EfeitoSomEscrita.mp3"></audio>
+        <audio id="somLivro" src="som/efeitoSomLivroArrastando.mp3"></audio>
+        <audio id="somLampada" src="som/efeitoLampadabtn.mp3"></audio> 
+
+        <button class="btnPause" id="btnPause">🎵</button> 
+  
+        <!-- ABA LAMPADA -->
+        <div id="filtroLuz" class="escuro"></div> <!-- a div que cobre toda a tela, transparente-->
+
+
+        <!-- ABA NOTEBOOK -->
+        <div id="containerLaptop" class="pc">
+            <button class="btnX" id="sairLaptop">X</button>
+        </div> <!-- notebook -->
+
+
+
+        <!-- ABA DIÁRIO -->
+         <div class="containerDiario" id="diario">
+            <div class="topo">
+                <h1>Diário</h1>
+                <button class="btnSeta" id="sairDiario">🔙</button>
+            </div>
+            <div class="duasCaixas">
+                <div class="box">
+                    <input type="text" class="inputDiary" id="nomeDiario" placeholder="Escreva o titulo do dia...">
+                    <input type="date" class="inputDiary" id="dataDiario" placeholder="Ex: 18.11.2026">
+                    <input type="text" class="inputDiary" id="humorDiario" placeholder="Ex: Bem, Animada, Cansada...">
+                    <textarea class="inputDiary textoGrande" id="textoCaixa" placeholder="..."></textarea>
+
+                    <div class="msgError">
+                            <p id="msgErro"></p>
+                        </div>
+
+                    <div class="boxBtn">
+                        <button class="btnDiary" id="apagar">Apagar</button>
+                        <button class="btnDiary" id="salvar">Salvar</button>
+                    </div>
+                </div>
+
+                <div class="boxLista"> 
+                    <ul class="lista" id="lista"></ul>
+                </div>
+
+                <!--mostrando nota do diário-->
+
+                <div class="containerMostrar" id="notaMostrar">
+                    <div class="boxMostrar sizeInfo" id="localinfoNota"></div>
+                    <div class="boxMostrar sizeTexto" id="localTexto"></div> <!-- recebe o texto que eu escrevi no diario-->
+                    <div class="boxBtn">
+                        <button class="btnDiary" id="excluirNota">Excluir</button>
+                        <button class="btnDiary" id="voltarNota">Voltar</button>
+                    </div>
+                </div>
+
+            </div>
+         </div>
+
+
+
+        <!-- POEMA -->
+         <div class="containerPoema" id="poema">
+            <div class="topoPoema">
+                <h1>Meus Poemas</h1>
+                <button class="btnSair" id="btnSairPoema">🔙</button>
+            </div>
+            <div class="estante">
+                <div class="livroPoema corPrimeiro">
+                    <button class="btnPoema corPrimeiro" id="primeiroPoema"></button>
+                </div>
+                <div class="livroPoema corSegundo">
+                    <button class="btnPoema corSegundo" id="segundoPoema"></button>
+                </div>
+                <div class="livroPoema corTerceiro">
+                    <button class="btnPoema corTerceiro" id="terceiroPoema"></button>
+                </div>
+                <div class="livroPoema corQuarto">
+                    <button class="btnPoema corQuarto" id="quartoPoema"></button>
+                </div>
+                <div class="livroPoema corQuinto">
+                    <button class="btnPoema corQuinto" id="quintoPoema"></button>
+                </div>
+            </div>
+
+            <!--MOSTRANDO O POEMA-->
+            <div class="mostrarPoema" id="mostrarPoema"> <!--container-->
+                <div class="papel">
+                    <div class="tituloPoema"> <!--topo-->
+                        <input type="text" class="inputTitulo" id="tituloPoema">
+                        <button class="btnSair" id="sairMostrarPoema">🔙</button>
+                    </div>
+
+                    <div class="papelTexto">
+                      <textarea class="textArea" id="inputPoema" placeholder="..."></textarea>
+                    </div>
+
+                    <div class="boxBtnPoema">
+                        <button class="btnPoemaMostrar" id="adicionarPoema">Salvar</button>
+                        <button class="btnPoemaMostrar" id="deletarPoema">Deletar</button>
+                    </div> 
+                </div>
+            </div>
+         </div>
+        
+
+        <!-- BTN -->
+
+        <button class="btn posi-lampada" id="lampBtn"></button> 
+        <button class="btn posi-diario" id="diarioBtn"></button> 
+        <button class="btn posi-laptop" id="laptopBtn"></button> 
+        <button class="btn posi-livro" id="livroBtn"></button> 
+        <button class="btn posi-poema" id="poemaBtn"></button> 
+        <button class="btn posi-roupa" id="roupaBtn"></button> 
+    </div>
+
+
+    <script src="logica.js"></script>
+
+
+    
+</body>
+</html>
